@@ -1,0 +1,113 @@
+body {
+  background-color: rgb(202, 236, 248);
+  background-image: url('background.jpg');
+  background-size: cover;
+  text-align: center;
+  font-family: monospace;
+}
+
+button {
+  background: #a2539e;
+  color: white;
+  border: 2px solid #6c386a;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: max-content;
+  margin-top: 10px;
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-width), var(--tile-size));
+  grid-template-rows: repeat(var(--grid-height), var(--tile-size));
+  padding: 5px;
+  background-color: rgb(66, 115, 75);
+  border-radius: 2px;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.game-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side-panel {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.stats-panel {
+    background: rgba(255, 255, 255, 0.349);
+    border-radius: 15px;
+    margin-left: 20px;
+    max-width: 200px;
+    border: 2px dashed #a2539e;
+    padding: 10px;
+}
+
+.settings {
+  margin-right: 20px;
+  align-self: flex-end;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-items: end;
+}
+
+input {
+    border: 2px solid #a2539e;
+    border-radius: 5px;
+    padding: 5px;
+    width: 42px;
+    outline: none;
+}
+
+.tile {
+  width: var(--tile-size);
+  height: var(--tile-size);
+  background-color:#97e290;
+  border-top: 4px solid #c4fabf;
+  border-left: 4px solid #c4fabf; 
+  border-right: 4px solid #83b87e;
+  border-bottom: 4px solid #83b87e;  
+  box-sizing: border-box;
+  font-size: x-large;
+  font-weight: bold;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  cursor: url('wand.png'), pointer;
+}
+
+.tile:hover {
+    background-color: #a3f39c;
+}
+
+.tile.revealed {
+  background-color: #fee8fd;
+  box-shadow: none;
+  border: 1px solid #e3c0e1;
+}
+
+.game-over {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 60px;
+}

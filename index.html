@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="game.js"></script>
+        <title>Unicorn Sweeper</title>
+    </head>
+    <body>
+        <h1>Unicorn Sweeper</h1>
+        <p>Find all the sleeping unicorns without waking them up!</p>
+        <div class="content">
+            <div class="side-panel">
+                <div class="settings">
+                    <div class="input-group">
+                        <label>Width:</label>
+                        <input type="number" id="input-width" value="10" min="5" max="30">
+                    </div>
+                    <div class="input-group">
+                        <label>Height:</label>
+                        <input type="number" id="input-height" value="10" min="5" max="30">
+                    </div>
+                    <div class="input-group">
+                        <label>Unicorns:</label>
+                        <input type="number" id="input-unicorns" value="15" min="1" max="100">
+                    </div>
+                    <button id="start-button">Generate New</button>
+                </div>
+            </div>
+
+            <div class="game-area">
+                <div id="game-container" class="game-container"></div>
+            </div>
+            
+            <div class="side-panel">
+                <div class="stats-panel">
+                    <h3>Stats</h3>
+                    <p>🦄 Sleeping unicorns: <span id="unicorn-total">0</span></p>
+                    <p>🌈 Flags used: <span id="flags-used">0</span></p>
+                </div>
+            </div>
+        </div>
+        <button onclick="location.reload()">Play Again</button>
+    </body>
+</html>
