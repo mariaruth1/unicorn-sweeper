@@ -29,6 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
         gameMatrix = [];
         document.getElementById('unicorn-total').innerText = unicornCount;
         document.getElementById('flags-used').innerText = flagsUsed;
+        const gameOverText = document.getElementById('game-over-message');
+        if (gameOverText){
+            gameOverText.remove();
+        }
 
         const tileSize = 40;
         gameContainer.style.setProperty('--grid-width', width);
@@ -216,6 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function gameOver(displayText){
         isGameOver = true;
         const gameOverText = document.createElement('div');
+        gameOverText.id = 'game-over-message';
         gameOverText.classList.add('game-over');
         gameOverText.innerText = displayText;
         document.body.appendChild(gameOverText);
