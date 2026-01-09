@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         gameMatrix = [];
         document.getElementById('unicorn-total').innerText = unicornCount;
         document.getElementById('flags-used').innerText = flagsUsed;
+        startButton.innerText = "Generate New"
         const gameOverText = document.getElementById('game-over-message');
         if (gameOverText){
             gameOverText.remove();
