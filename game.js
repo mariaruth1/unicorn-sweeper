@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let gameMatrix = [];
     let isGameOver = false;
     let flagsUsed = 0;
+    let hasGameStarted = false;
 
     function initGame() {
         gameContainer.innerHTML = '';
@@ -22,10 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        hasGameStarted = false;
         isGameOver = false;
         flagsUsed = 0;
         gameMatrix = [];
         document.getElementById('unicorn-total').innerText = unicornCount;
+        document.getElementById('flags-used').innerText = flagsUsed;
 
         const tileSize = 40;
         gameContainer.style.setProperty('--grid-width', width);
@@ -76,6 +79,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function tileFlagged(x, y){
+        if (!hasGameStarted){
+            hasGameStarted = true;
+            startButton.innerText = "New Game";
+        }
+
         const tile = gameMatrix[y][x];
         if (isGameOver || tile.revealed) return;
 
@@ -93,6 +101,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function tileClicked(x, y){
+        if (!hasGameStarted){
+            hasGameStarted = true;
+            startButton.innerText = "New Game";
+        }
+
         const tile = gameMatrix[y][x];
         if (isGameOver || tile.revealed || tile.flagged) return;
         tile.revealed = true;
