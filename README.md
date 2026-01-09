@@ -7,5 +7,6 @@
 Credits:
 <ul>
   <li><a href="https://www.flaticon.com/free-icons">Wand icon created by Smashicons - Flaticon</a></li>
+  <li><a href="https://www.flaticon.com/free-icons/unicorn">Unicorn icon created by Freepik - Flaticon</a></li>
   <li><a href="https://www.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-cloud-background_13778010.htm#fromView=keyword&page=1&position=0&uuid=870e7835-f638-472b-a390-5515c08ef0f4&query=Pastel+clouds">Background created by orchidart - Freepik</a></li>
 </ul>
