@@ -64,14 +64,12 @@ document.addEventListener("DOMContentLoaded", () => {
         let pressTimer;
 
         tileElement.addEventListener("touchstart", (e) => {
-          e.preventDefault();
           pressTimer = window.setTimeout(() => {
             tileFlagged(x, y); // Long press places a flag
           }, 500); // 500ms for a long press
         });
 
         tileElement.addEventListener("touchend", () => {
-          e.preventDefault();
           clearTimeout(pressTimer);
         });
         tileElement.addEventListener("click", () => tileClicked(x, y));
