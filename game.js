@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const gameContainer = document.getElementById("game-container");
   const startButton = document.getElementById("start-button");
   const isMobile = window.matchMedia("(pointer: coarse)").matches;
+  const modeCheckbox = document.getElementById("mode-checkbox");
 
   let width = isMobile ? 7 : 10;
   let height = isMobile ? 14 : 10;
@@ -11,10 +12,14 @@ document.addEventListener("DOMContentLoaded", () => {
   let isGameOver = false;
   let flagsUsed = 0;
   let hasGameStarted = false;
+  let isFlagMode = false;
 
   document.getElementById("input-width").value = width;
   document.getElementById("input-height").value = height;
   document.getElementById("input-unicorns").value = unicornCount;
+  modeCheckbox.addEventListener("change", (e) => {
+    isFlagMode = e.target.checked;
+  });
   startButton.addEventListener("click", initGame);
   initGame();
 
@@ -125,6 +130,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function tileClicked(x, y) {
+    if (isFlagMode) {
+      tileFlagged(x, y);
+      return;
+    }
+
     if (!hasGameStarted) {
       hasGameStarted = true;
       startButton.innerText = "New Game";

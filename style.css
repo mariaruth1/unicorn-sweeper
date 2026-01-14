@@ -17,6 +17,16 @@ button {
   margin-top: 10px;
 }
 
+.buttons {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 20px;
+}
+
+.mobile-toggle-container {
+  display: none;
+}
+
 .game-container {
   display: grid;
   grid-template-columns: repeat(var(--grid-width), var(--tile-size));
@@ -123,6 +133,11 @@ input {
   .content {
     flex-direction: column;
     align-items: center;
+    margin-top: 0;
+  }
+
+  h1 {
+    margin-bottom: 0;
   }
 
   .side-panel {
@@ -132,16 +147,70 @@ input {
     margin: 10px 0;
   }
 
-  .settings {
-    margin-right: 0;
-    align-self: center;
-    text-align: center;
-    display: grid;
-    grid-row: 2;
-  }
-
   .game-over {
     font-size: 40px;
     width: 80%;
+  }
+
+  .tile {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    touch-action: none;
+  }
+
+  .settings {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .settings>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  /* Row 2: Button and Toggle */
+  .buttons {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .buttons button {
+    margin-top: 0;
+  }
+
+  .mobile-toggle-container {
+    display: flex;
+    margin: 0;
+  }
+
+  .simple-toggle {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    font-size: 2rem;
+    border: 2px dashed #6c386a;
+    border-radius: 10px;
+  }
+
+  .simple-toggle span {
+    display: flex;
+    align-items: center;
+    line-height: 0;
+  }
+
+  #mode-checkbox {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
   }
 }
