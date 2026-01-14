@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   const gameContainer = document.getElementById("game-container");
   const startButton = document.getElementById("start-button");
+  const isMobile = window.innerWidth < 768;
 
-  let width = 10;
-  let height = 10;
+  let width = isMobile ? 7 : 10;
+  let height = isMobile ? 14 : 10;
   let unicornCount = 15;
   let totalTiles;
   let gameMatrix = [];
@@ -63,12 +64,14 @@ document.addEventListener("DOMContentLoaded", () => {
         let pressTimer;
 
         tileElement.addEventListener("touchstart", (e) => {
+          e.preventDefault();
           pressTimer = window.setTimeout(() => {
             tileFlagged(x, y); // Long press places a flag
           }, 500); // 500ms for a long press
         });
 
         tileElement.addEventListener("touchend", () => {
+          e.preventDefault();
           clearTimeout(pressTimer);
         });
         tileElement.addEventListener("click", () => tileClicked(x, y));

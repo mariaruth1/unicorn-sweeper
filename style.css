@@ -114,9 +114,14 @@ input {
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
+
+  .description,
+  .side-panel:has(.stats-panel) {
+    display: none !important;
+  }
+
   .content {
     flex-direction: column;
-    /* Stack settings, grid, and stats */
     align-items: center;
   }
 
@@ -127,29 +132,16 @@ input {
     margin: 10px 0;
   }
 
-  .settings,
-  .stats-panel {
+  .settings {
     margin-right: 0;
     align-self: center;
     text-align: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  :root {
-    --tile-size: 35px !important;
+    display: grid;
+    grid-row: 2;
   }
 
   .game-over {
     font-size: 40px;
     width: 80%;
   }
-}
-
-/* Prevent accidental zooming when tapping tiles */
-.tile {
-  touch-action: manipulation;
-  user-select: none;
-  -webkit-user-select: none;
 }
