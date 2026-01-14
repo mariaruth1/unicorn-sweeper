@@ -1,16 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
   const gameContainer = document.getElementById("game-container");
   const startButton = document.getElementById("start-button");
-  const mobileQuery = window.matchMedia("(max-width: 768px)");
+  const isMobile = window.matchMedia("(pointer: coarse)").matches;
 
-  let width = mobileQuery.matches ? 7 : 10;
-  let height = mobileQuery.matches ? 14 : 10;
+  let width = isMobile ? 7 : 10;
+  let height = isMobile ? 14 : 10;
   let unicornCount = 15;
   let totalTiles;
   let gameMatrix = [];
   let isGameOver = false;
   let flagsUsed = 0;
   let hasGameStarted = false;
+
+  document.getElementById("input-width").value = width;
+  document.getElementById("input-height").value = height;
+  document.getElementById("input-unicorns").value = unicornCount;
+  startButton.addEventListener("click", initGame);
+  initGame();
 
   function initGame() {
     gameContainer.innerHTML = "";
@@ -244,7 +250,4 @@ document.addEventListener("DOMContentLoaded", () => {
     gameOverText.innerText = displayText;
     document.body.appendChild(gameOverText);
   }
-
-  startButton.addEventListener("click", initGame);
-  initGame();
 });
