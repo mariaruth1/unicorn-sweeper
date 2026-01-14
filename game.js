@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   const gameContainer = document.getElementById("game-container");
   const startButton = document.getElementById("start-button");
-  const isMobile = window.innerWidth < 768;
+  const mobileQuery = window.matchMedia("(max-width: 768px)");
 
-  let width = isMobile ? 7 : 10;
-  let height = isMobile ? 14 : 10;
+  let width = mobileQuery.matches ? 7 : 10;
+  let height = mobileQuery.matches ? 14 : 10;
   let unicornCount = 15;
   let totalTiles;
   let gameMatrix = [];
