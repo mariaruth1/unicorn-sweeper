@@ -37,7 +37,7 @@ Since this is a **Progressive Web App (PWA)**, you don't need the Play Store:
 
 1. Navigate to the [Live Demo](https://mariaruth1.github.io/unicorn-sweeper/).
 2. Select **"Install App"** or **"Add to Home Screen"**.
-3. The 🦄 icon will appear on your home screen and work completely offline!
+3. The 🦄 icon will appear on your home screen and work completely offline.
 
 ---
 
