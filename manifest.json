@@ -1,6 +1,6 @@
 {
   "name": "Unicorn Sweeper",
-  "short_name": "Unicorns",
+  "short_name": "Sweeper",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#caecf8",

@@ -1,4 +1,4 @@
-const CACHE_NAME = "unicorn-sweeper";
+const CACHE_NAME = "unicorn-sweeper-v1";
 const ASSETS = [
   "index.html",
   "style.css",
