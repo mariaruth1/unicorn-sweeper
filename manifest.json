@@ -1,0 +1,16 @@
+{
+  "name": "Unicorn Sweeper",
+  "short_name": "Unicorns",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#caecf8",
+  "theme_color": "#a2539e",
+  "icons": [
+    {
+      "src": "unicorn_large.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

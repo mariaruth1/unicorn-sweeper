@@ -1,4 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker
+        .register("service-worker.js")
+        .then(() => console.log("Offline mode ready!"))
+        .catch((err) => console.log("Offline mode failed", err));
+    });
+  }
+
   const gameContainer = document.getElementById("game-container");
   const startButton = document.getElementById("start-button");
   const isMobile = window.matchMedia("(pointer: coarse)").matches;
