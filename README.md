@@ -19,6 +19,18 @@ A cozy, magical reimagining of the classic Minesweeper game. Instead of clearing
 
 ---
 
+## 🎮 How to Play
+The goal is to reveal all the safe tiles without waking up any sleeping unicorns!
+
+1. Reveal a Tile: Click (Desktop) or Tap (Mobile) a green grass tile.
+2. Read the Numbers: If a tile shows a number, that tells you how many unicorns are sleeping in the 8 surrounding tiles.
+   * Purple "1" means there is exactly one unicorn nearby.
+   * Red "8" means you are completely surrounded!
+3. Place a Rainbow (Flag):
+   * Desktop: Right-click or use the Wand to place a 🌈 on a tile where you think a unicorn is hiding.
+   * Mobile: Toggle the 🦄 button to switch to Flag Mode, then tap tiles to place rainbows or long press.
+4. Win the Game: You win when all safe tiles are revealed or all unicorns are correctly flagged!
+
 ## 📱 Installation (Android)
 
 Since this is a **Progressive Web App (PWA)**, you don't need the Play Store:
