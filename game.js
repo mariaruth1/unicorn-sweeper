@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     flagsUsed = 0;
     gameMatrix = [];
     isFlagMode = false;
+    modeCheckbox.checked = isFlagMode;
     document.getElementById("unicorn-total").innerText = unicornCount;
     document.getElementById("flags-used").innerText = flagsUsed;
     startButton.innerText = "Generate New";
